@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .text-to-copy {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            white-space: pre; /* Preserve white space and line breaks */
+            width: 80%;
+            max-width: 800px;
+            overflow: auto;
+            background-color: #f9f9f9;
+        }
+
+        .copy-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px; /* Ensure spacing between button and text area */
+        }
+
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="copy-button" onclick="copyText()">Copy Text</button>
+        <pre class="text-to-copy" id="textToCopy">
+            // < SECOND LARGEST IN AN ARRAY > //
+
+            // #include <stdio.h>
+            // int main()
+            // {
+            //     int a[]={4,2,30,5,10,70};
+            //     int l=a[0];
+            //     int sl=-100000;
+            //     for(int i=0;i<6;i++){
+            // if(a[i]>l){
+            //     sl=l;
+            //     l=a[i];
+            // }
+            // else if(a[i]>l&&a[i]<sl){
+            //     sl=a[i];
+            
+            // }
+            //     }
+            //     printf("%d",sl);
+            
+            
+            //     return 0;
+            // }
+            
+            
+            // < DUPLICATE IN AN ARRAY >
+            
+            // #include <stdio.h>
+            // int dup(int a[],int n){
+            //     int i=0;
+            //     for(int j=1;j<n;j++){
+            //         if(a[i]!=a[j]){
+            //             a[i+1]=a[j];
+            //             i++;
+            //         }
+            //     }
+            //     return i+1;
+            // }
+            // int main(){
+            //     int a[]={4,2,30,5,10,70,70,70,70};
+            //    int n= dup(a,9);
+            //     for(int i=0;i<n;i++){
+            //         printf("%d ",a[i]);
+            //     }
+            // }
+            
+            
+            // <LEFT ROTATE WITH D>
+            
+            // #include <stdio.h>
+            // void rev(int a[],int i,int j){
+                
+            //     while(i<j){
+            //         int temp=a[i];
+            //         a[i]=a[j];
+            //         a[j]=temp;
+            //         i++;j--;
+            //     }
+            // }
+            // int main()
+            // {
+            //     int a[]={1,2,3,4,5};
+            //     int n=5;
+            //     int d=2;
+            //     rev(a,0,n-1);
+            //     rev(a,0,d);
+            //     rev(a,d+1,n-1);
+            //     for(int i=0;i<n;i++){
+            // printf("%d ",a[i]);
+            //     }
+            // }
+            
+            
+            //< MOVE ALL ZERO TO LAST >
+            
+            // #include <stdio.h>
+            // void swap(int *i,int *j){
+            //     int temp=*i;
+            //     *i=*j;
+            //     *j=temp;
+            //     }
+            // void zero(int a[],int n){
+            //     int j=-1;
+            //     for(int i=0;i<n;i++){
+            //         if(a[i]==0){
+            //             j=i;
+            //             break;
+            //         }
+            //     }
+            //     for(int i=j+1;i<n;i++){
+            //         if(a[i]!=0){
+            //            swap(&a[i],&a[j]);
+            //            j++;
+            //         }
+            //     }
+            //     return;
+            // }
+            // int main(){
+            //     int a[]={1,0,2,3,2,0,0,4,5,1};
+            //     zero(a,10);
+            //     for(int i=0;i<10;i++){
+            //         printf("%d ",a[i]);
+            //     }
+            // }
+            
+            
+            //<UNION IN AN ARRAY>
+            
+            // #include <stdio.h>
+            // int main(){
+            //     int n;
+            //     int m;
+            //     scanf("%d",&n);
+            //     int a[n];
+            //     for(int i=0;i<n;i++){
+            //         scanf("%d",&a[i]);
+            //     }
+            //     scanf("%d",&m);
+            //       int arr[m];
+            //      for(int i=0;i<m;i++){
+            //         scanf("%d",&arr[i]);
+            //     }
+            //     int i=0,j=0,ans[n+m],k=0;
+            //     while(i<n && j<m){
+            //         if(a[i]<=arr[j]){
+            //         if(k==0 || ans[k-1]!=a[i]){
+            //             ans[k]=a[i];
+            //             k++;
+            //         }
+            //         i++;}
+            //         else{
+            //             if(k==0||ans[k-1]!=arr[j]){
+            //                 ans[k]=arr[j];
+            //                 k++; 
+            //             }
+            //             j++;
+            //         }
+            //     }
+            //     while(i<n){
+            //         if(ans[k-1]!=a[i]){
+            //             ans[k]=a[i];
+            //             k++;
+            //         }
+            //         i++;
+            //     }    while(j<m){
+            //         if(ans[k-1]!=arr[j]){
+            //             ans[k]=arr[j];
+            //             k++;
+            //         }
+            //         j++;
+            //     }
+            //     for(int i=0;i<k;i++){
+            //         printf("%d ",ans[i]);
+            //     }  
+            // }
+            
+            
+            //<INTERSECTION IN AN ARRAY>
+            
+            // #include <stdio.h>
+            // int main()
+            // {
+            //     int a[]={1,2,3,4,5,6};
+            //     int b[]={2,3,4,5,6};
+            //     int i=0,j=0,n=6,m=5,k=0,ans[n+m];
+            //     while(i<n && j<m){
+            //         if(a[i]<b[j]){
+            //             i++;
+            //         }else if(b[j]<a[i]){
+            //             j++;
+            //         }else{
+            //             ans[k]=a[i];
+            //             i++;j++;k++;
+            //         }
+            //     }
+            //     for(int i=0;i<k;i++){
+            //         printf("%d ",ans[i]);
+            //     }
+            // }
+            
+            
+            //<>
+            
+            // #include <stdio.h>
+            // int max(int a,int b){
+            //     if(a>b || a==b){
+            //         return a;
+            //     }else{
+            //         return b;
+            //     }
+            // }
+            // int main(){
+            //     int a[10]={1,2,3,1,1,1,1,1,3,3};
+            //     int k=6;
+            //     int n=10;
+            //     int r=0,l=0,sum=a[0],maxlen=0;
+            //     while(r<n){
+            //         while(l<=r && sum>k){
+            //            sum-=a[l];
+            //              l++;
+            //         }
+            //         if(sum==k){
+            //             maxlen=max(maxlen,r-l+1);
+            //         }
+            // r++;
+            //         if(r<n){
+            //             sum=sum+a[r];
+            //         }
+            //     }
+            //     printf("%d",maxlen);
+            // }
+            
+            
+            //<MAX SUM IN SUB ARRAY>
+            
+            // #include <stdio.h>
+            // int main(){
+            //     int a[8]={-2,-3,4,-1,-2,1,5,-3};
+            //     int n=8;
+            //     int sum=0;
+            //     int max=-100000;
+            //     int s=-1,e=-1;
+            //     for(int i=0;i<n;i++){
+            //         if(sum==0){
+            //             s=i;
+            //         }
+            //         sum=sum+a[i];
+            //         if(sum>max){
+            //             max=sum;
+            //             e=i;
+            //         }
+            //         if(sum<0){
+            //             sum=0;
+            //         }
+            //     }
+            //     printf("%d %d %d",max,s,e);
+            // }
+            
+            
+            //<>
+            
+            // #include <stdio.h>
+            // int isvalid(int a[],int n,int m,int c){
+            //     int sum=0;
+            //     for(int i=0;i<n;i++){
+            //         if(a[i]>c){
+            //             return 0;
+            //         }
+            //         sum+=a[i];
+            //         if(sum>c){
+            //             sum=a[i];
+            //             m--;
+            //         }
+            //     }
+            //     if(m>0){
+            //         return 1;
+            //     }else{
+            //         return 0;
+            //     }
+            // }
+            // int main(){
+            //     int a[4]={7,2,5,10,8};
+            //     int n=4;
+            //     int m=2;
+            //     int l=a[0],r=0;
+            //     for(int i=0;i<n;i++){
+            //         r+=a[i];
+            //     }
+            //     int ans=0;
+            //     while(l<=r){
+            //         int mid=(l+r)/2;
+            //         if(isvalid(a,n,m,mid)){
+            //             ans=mid;
+            //             r=mid-1;
+            //         }else{
+            //             l=mid+1;
+            //         }
+            //     }
+            //     printf("%d",ans);
+            // }
+        </pre>
+    </div>
+    <script>
+        function copyText() {
+            const textElement = document.getElementById('textToCopy');
+            const range = document.createRange();   
+            range.selectNode(textElement);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            try {
+                document.execCommand('copy');
+                alert('Text copied to clipboard!');
+            } catch (err) {
+                alert('Failed to copy text');
+            }
+        }
+    </script>
+</body>
+</html>
